@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Spellbook by warlock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Spellbook</h1>
+      <h2 class="project-tagline">Library for extend the javascript habilities.</h2>
+      <a href="https://github.com/warlock/spellbook" class="btn">View on GitHub</a>
+      <a href="https://github.com/warlock/spellbook/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/warlock/spellbook/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="nodejs--import-module" class="anchor" href="#nodejs--import-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Node.Js : Import module:</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> sb <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>spellbook<span class="pl-pds">"</span></span>);</pre></div>
+
+<h2>
+<a id="web--import-module" class="anchor" href="#web--import-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web : Import module:</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>spellbook/spellbook.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>));</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h2>
+<a id="class-extension" class="anchor" href="#class-extension" aria-hidden="true"><span class="octicon octicon-link"></span></a>CLASS EXTENSION:</h2>
+
+<p>Array.remove(obj);</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">remove</span>(<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>-&gt; ['a', 'c']</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> date <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();
+<span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>, <span class="pl-s"><span class="pl-pds">'</span>2<span class="pl-pds">'</span></span>, date];
+<span class="pl-smi">list</span>.<span class="pl-en">remove</span>([<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>, date]);</pre></div>
+
+<p>-&gt; ['a', '2']</p>
+
+<p>Array.clear();</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-c1">clear</span>();</pre></div>
+
+<p>-&gt; []</p>
+
+<h2>
+<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>TOOLS:</h2>
+
+<p>Range:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-c1">0</span>,<span class="pl-c1">10</span>);</pre></div>
+
+<p>-&gt; [0,1,2,3,4,5,6,7,8,9,10]</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-k">-</span><span class="pl-c1">100</span>,<span class="pl-c1">100</span>,<span class="pl-c1">20</span>);</pre></div>
+
+<p>-&gt; [-100,-80,-60,-40,-20,0,20,40,60,80,100]</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>F<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>-&gt; ['A','B','C','D','E','F')</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>m<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>r<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>-&gt; ['m','n','o','p','q','r']</p>
+
+<p>Clone Object in javascript ES5 width ES6 style:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">assing</span>(obj);
+<span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">clone</span>(obj);</pre></div>
+
+<p>Remove object from Array:</p>
+
+<pre><code>sb.remove(array, obj);
+</code></pre>
+
+<p>Clear all values from Array:</p>
+
+<pre><code>sb.clear(array);
+</code></pre>
+
+<p>Class check:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">isFunction</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isArray</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isObject</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isNumber</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isString</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isBoolean</span>(obj);</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/warlock/spellbook">Spellbook</a> is maintained by <a href="https://github.com/warlock">warlock</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-71301051-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
