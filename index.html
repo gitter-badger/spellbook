@@ -71,6 +71,34 @@
 
 <p>-&gt; 'b'</p>
 
+<p><strong>Array.shuffle();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">shuffle</span>();</pre></div>
+
+<p>-&gt; ['c', 'a', 'b']</p>
+
+<p><strong>Array.first();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">first</span>();</pre></div>
+
+<p>-&gt; 'a'</p>
+
+<p><strong>Array.last();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">last</span>();</pre></div>
+
+<p>-&gt; 'c'</p>
+
+<p><strong>Array.inArray();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">inArray</span>(<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>-&gt; true</p>
+
 <p><strong>Object.getKeys("key");</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
@@ -148,6 +176,18 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-c1">random</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>);</pre></div>
 
 <p>-&gt; 6</p>
+
+<p><strong>Real date validator:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">checkDate</span>(<span class="pl-s"><span class="pl-pds">'</span>dd-mm-yyyy<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>30/02/2015<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>-&gt; false</p>
+
+<p><strong>Limit of words:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">excerpt</span>(<span class="pl-s"><span class="pl-pds">'</span>One, two, Freddy<span class="pl-cce">\'</span>s coming for you<span class="pl-pds">'</span></span>, <span class="pl-c1">3</span>);</pre></div>
+
+<p>-&gt; 'One, two, Freddy's'</p>
 
 <p><strong>Class boolean check:</strong></p>
 
