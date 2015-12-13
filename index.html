@@ -46,10 +46,15 @@
 
 <p><strong>Array.remove(obj);</strong></p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">remove</span>(<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>);</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>];
+<span class="pl-smi">list</span>.<span class="pl-en">remove</span>(<span class="pl-c1">2</span>);</pre></div>
 
 <p>-&gt; ['a', 'c']</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>];
+<span class="pl-smi">list</span>.<span class="pl-en">remove</span>([<span class="pl-c1">2</span>,<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>]);</pre></div>
+
+<p>-&gt; ['c']</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> date <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();
 <span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>, <span class="pl-s"><span class="pl-pds">'</span>2<span class="pl-pds">'</span></span>, date];
@@ -157,9 +162,11 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">assing</span>(obj);
 <span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">clone</span>(obj);</pre></div>
 
-<p><strong>Remove Object from Array:</strong></p>
+<p><strong>Remove Objects from Array:</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, obj);</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, [obj1, obj2]);</pre></div>
 
 <p><strong>Clear all values from Array:</strong></p>
 
