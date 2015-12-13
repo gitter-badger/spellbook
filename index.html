@@ -64,15 +64,22 @@
 
 <p>-&gt; []</p>
 
-<p><strong>Object.get("key");</strong></p>
+<p><strong>Array.random();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-c1">random</span>();</pre></div>
+
+<p>-&gt; 'b'</p>
+
+<p><strong>Object.getKeys("key");</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
-<span class="pl-smi">spells</span>.<span class="pl-en">get</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);</pre></div>
+<span class="pl-smi">spells</span>.<span class="pl-en">getKeys</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);</pre></div>
 
 <p>-&gt; {"fire": 5}</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
-<span class="pl-smi">spells</span>.<span class="pl-en">get</span>([<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span>]);</pre></div>
+<span class="pl-smi">spells</span>.<span class="pl-en">getKeys</span>([<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span>]);</pre></div>
 
 <p>-&gt; {"fire": 5, "ice": 4}</p>
 
