@@ -20,17 +20,17 @@
 
     <section class="main-content">
       <h2>
-<a id="installdownload" class="anchor" href="#installdownload" aria-hidden="true"><span class="octicon octicon-link"></span></a>INSTALL/DOWNLOAD</h2>
+<a id="installdownload" class="anchor" href="#installdownload" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALL/DOWNLOAD</h2>
 
 <div class="highlight highlight-source-shell"><pre>npm install spellbook</pre></div>
 
 <h2>
-<a id="nodejs--import-module" class="anchor" href="#nodejs--import-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Node.Js : Import module:</h2>
+<a id="nodejs--import-module" class="anchor" href="#nodejs--import-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node.Js : Import module:</h2>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> sb <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">"</span>spellbook<span class="pl-pds">"</span></span>);</pre></div>
 
 <h2>
-<a id="web--import-module" class="anchor" href="#web--import-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web : Import module:</h2>
+<a id="web--import-module" class="anchor" href="#web--import-module" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web : Import module:</h2>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>spellbook/spellbook.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
 <span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
@@ -38,7 +38,7 @@
 <span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h2>
-<a id="class-extension" class="anchor" href="#class-extension" aria-hidden="true"><span class="octicon octicon-link"></span></a>CLASS EXTENSION</h2>
+<a id="class-extension" class="anchor" href="#class-extension" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CLASS EXTENSION</h2>
 
 <blockquote>
 <p>Existing class methods will be ignored</p>
@@ -111,6 +111,78 @@
 
 <p>-&gt; true</p>
 
+<p><strong>Array.isArray();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">isArray</span>();</pre></div>
+
+<p>-&gt; true</p>
+
+<p><strong>Array.each();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>index: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i <span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span> res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+});</pre></div>
+
+<p>-&gt; a</p>
+
+<p>-&gt; b</p>
+
+<p>-&gt; c</p>
+
+<p><strong>Array.each(); With end function</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; a</p>
+
+<p>-&gt; b</p>
+
+<p>-&gt; c</p>
+
+<p>-&gt; End</p>
+
+<p><strong>Array.each(); Iteration with time interval and end function</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; a // Wait 5 seconds</p>
+
+<p>-&gt; b // Wait 5 seconds</p>
+
+<p>-&gt; c</p>
+
+<p>-&gt; End</p>
+
+<p><strong>Array.eachEnd(); Run next when the method "done" is executed.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">eachEnd</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>, <span class="pl-smi">done</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">done</span>();
+    }, <span class="pl-c1">8000</span>);
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; a // Wait 8 seconds;</p>
+
+<p>-&gt; b // Wait 8 seconds;</p>
+
+<p>-&gt; c // Wait 8 seconds;</p>
+
 <p><strong>Object.getKeys("key");</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
@@ -143,8 +215,68 @@
 
 <p>-&gt; {"electro": 6, "wind": 7}</p>
 
+<p><strong>Object.isObject();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">isObject</span>();</pre></div>
+
+<p>-&gt; true</p>
+
+<p><strong>Boolean.isBoolean();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> boh <span class="pl-k">=</span> <span class="pl-c1">false</span>;
+<span class="pl-smi">boh</span>.<span class="pl-en">isBoolean</span>();</pre></div>
+
+<p>-&gt; true</p>
+
+<p><strong>Function.isFunction();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">fun</span> <span class="pl-k">=</span> <span class="pl-k">function</span> () { <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>hi<span class="pl-pds">"</span></span>; };
+<span class="pl-smi">fun</span>.<span class="pl-en">isFunction</span>();</pre></div>
+
+<p>-&gt; true</p>
+
+<p><strong>String.isString();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> talk <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>hi!<span class="pl-pds">"</span></span>;
+<span class="pl-smi">talk</span>.<span class="pl-en">isString</span>();</pre></div>
+
+<p>-&gt; true</p>
+
+<p><strong>String.repeatify(num);</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>hi<span class="pl-pds">"</span></span>.<span class="pl-en">reatify</span>(<span class="pl-c1">5</span>);</pre></div>
+
+<p>-&gt; ['hi','hi','hi','hi','hi']</p>
+
+<p><strong>Number.times();</strong></p>
+
+<div class="highlight highlight-source-js"><pre>(<span class="pl-c1">3</span>).<span class="pl-en">times</span>(<span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi!<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; hi!</p>
+
+<p>-&gt; hi!</p>
+
+<p>-&gt; hi!</p>
+
+<p><strong>Number.isNumber();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> num <span class="pl-k">=</span> <span class="pl-c1">5.2</span>;
+<span class="pl-smi">num</span>.<span class="pl-en">isNumber</span>();</pre></div>
+
+<p>-&gt; true</p>
+
+<p><strong>Number.isInteger();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> num <span class="pl-k">=</span> <span class="pl-c1">5</span>;
+<span class="pl-smi">num</span>.<span class="pl-en">isInteger</span>();</pre></div>
+
+<p>-&gt; true</p>
+
 <h2>
-<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>TOOLS:</h2>
+<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TOOLS:</h2>
 
 <p><strong>Range:</strong></p>
 
@@ -184,6 +316,58 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">contains</span>(array, obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">inArray</span>(array, obj);</pre></div>
 
+<p><strong>Array iteration with end function</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">res</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; a // Wait 5 seconds</p>
+
+<p>-&gt; b // Wait 5 seconds</p>
+
+<p>-&gt; c</p>
+
+<p>-&gt; End</p>
+
+<p><strong>Array iteration with time interval and end function</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">res</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; a // Wait 5 seconds</p>
+
+<p>-&gt; b // Wait 5 seconds</p>
+
+<p>-&gt; c</p>
+
+<p>-&gt; End</p>
+
+<p><strong>Run next when the method "done" is executed.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">eachEnd</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>, <span class="pl-smi">done</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">done</span>();
+    }, <span class="pl-c1">8000</span>);
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<p>-&gt; a // Wait 8 seconds;</p>
+
+<p>-&gt; b // Wait 8 seconds;</p>
+
+<p>-&gt; c // Wait 8 seconds;</p>
+
 <p><strong>Iterators:</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">times</span>(<span class="pl-c1">10</span>, <span class="pl-k">function</span> () {
@@ -214,11 +398,12 @@
 <span class="pl-smi">sb</span>.<span class="pl-en">isArray</span>(obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">isObject</span>(obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">isNumber</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isInteger</span>(obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">isString</span>(obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">isBoolean</span>(obj);</pre></div>
 
 <h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>All the code here is under MIT license. Which means you could do virtually anything with the code.
 I will appreciate it very much if you keep an attribution where appropriate.</p>
