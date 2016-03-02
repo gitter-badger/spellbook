@@ -49,153 +49,159 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>];
 <span class="pl-smi">list</span>.<span class="pl-en">remove</span>(<span class="pl-c1">2</span>);</pre></div>
 
-<p>-&gt; ['a', 'c']</p>
+<pre><code>-&gt; ['a', 'c']
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>, <span class="pl-c1">2</span>];
 <span class="pl-smi">list</span>.<span class="pl-en">remove</span>([<span class="pl-c1">2</span>,<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>]);</pre></div>
 
-<p>-&gt; ['c']</p>
+<pre><code>-&gt; ['c']
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> date <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();
 <span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>, <span class="pl-s"><span class="pl-pds">'</span>2<span class="pl-pds">'</span></span>, date];
 <span class="pl-smi">list</span>.<span class="pl-en">remove</span>([<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>, date]);</pre></div>
 
-<p>-&gt; ['a', '2']</p>
+<pre><code>-&gt; ['a', '2']
+</code></pre>
 
 <p><strong>Array.clear();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-c1">clear</span>();</pre></div>
 
-<p>-&gt; []</p>
+<pre><code>-&gt; []
+</code></pre>
 
 <p><strong>Array.random();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-c1">random</span>();</pre></div>
 
-<p>-&gt; 'b'</p>
+<pre><code>-&gt; 'b'
+</code></pre>
 
 <p><strong>Array.shuffle();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">shuffle</span>();</pre></div>
 
-<p>-&gt; ['c', 'a', 'b']</p>
+<pre><code>-&gt; ['c', 'a', 'b']
+</code></pre>
 
 <p><strong>Array.first();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">first</span>();</pre></div>
 
-<p>-&gt; 'a'</p>
+<pre><code>-&gt; 'a'
+</code></pre>
 
 <p><strong>Array.last();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">last</span>();</pre></div>
 
-<p>-&gt; 'c'</p>
+<pre><code>-&gt; 'c'
+</code></pre>
 
-<p><strong>Array.inArray();</strong></p>
+<p><strong>Array.inArray(item);</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">inArray</span>(<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>);</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
-<p><strong>Array.contains();</strong></p>
+<p><strong>Array.contains(item);</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">contains</span>(<span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>);</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <p><strong>Array.isArray();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">isArray</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
-<p><strong>Array.each();</strong></p>
+<p><strong>Array.each(callback_loop(item, index)); Array iteration.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>index: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i <span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span> res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>index: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i <span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span> item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
 });</pre></div>
 
-<p>-&gt; a</p>
+<pre><code>-&gt; item: a
+-&gt; item: b
+-&gt; item: c
+</code></pre>
 
-<p>-&gt; b</p>
-
-<p>-&gt; c</p>
-
-<p><strong>Array.each(); With end function</strong></p>
+<p><strong>Array.each(callback_loop(item, index), callback_end); Array iteration with ending function.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; a</p>
+<pre><code>-&gt; item: a
+-&gt; item: b
+-&gt; item: c
+-&gt; End
+</code></pre>
 
-<p>-&gt; b</p>
-
-<p>-&gt; c</p>
-
-<p>-&gt; End</p>
-
-<p><strong>Array.each(); Iteration with time interval and end function</strong></p>
+<p><strong>Array.each(interval, callback_loop(item, index), callback_end); Iteration with time interval and ending function.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; a // Wait 5 seconds</p>
+<pre><code>-&gt; item: a // Wait 5 seconds
+-&gt; item: b // Wait 5 seconds
+-&gt; item: c
+-&gt; End
+</code></pre>
 
-<p>-&gt; b // Wait 5 seconds</p>
-
-<p>-&gt; c</p>
-
-<p>-&gt; End</p>
-
-<p><strong>Array.eachEnd(); Run next when the method "done" is executed.</strong></p>
+<p><strong>Array.eachEnd(callback_loop(item, index, next_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">eachEnd</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>, <span class="pl-smi">done</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">list</span>.<span class="pl-en">eachEnd</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
     <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-en">done</span>();
+        <span class="pl-en">next</span>();
     }, <span class="pl-c1">8000</span>);
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; a // Wait 8 seconds;</p>
+<pre><code>-&gt; item: a // Wait 8 seconds;
+-&gt; item: b // Wait 8 seconds;
+-&gt; item: c // Wait 8 seconds;
+-&gt; End
+</code></pre>
 
-<p>-&gt; b // Wait 8 seconds;</p>
-
-<p>-&gt; c // Wait 8 seconds;</p>
-
-<p>-&gt; End</p>
-
-<p><strong>Object.getKeys("key");</strong></p>
+<p><strong>Object.getKeys(keys);</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
 <span class="pl-smi">spells</span>.<span class="pl-en">getKeys</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);</pre></div>
 
-<p>-&gt; {"fire": 5}</p>
+<pre><code>-&gt; {"fire": 5}
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
 <span class="pl-smi">spells</span>.<span class="pl-en">getKeys</span>([<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span>]);</pre></div>
 
-<p>-&gt; {"fire": 5, "ice": 4}</p>
+<pre><code>-&gt; {"fire": 5, "ice": 4}
+</code></pre>
 
 <p><strong>Object.extend(obj);</strong></p>
 
@@ -203,79 +209,88 @@
 <span class="pl-k">var</span> newspells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
 <span class="pl-smi">spells</span>.<span class="pl-en">extend</span>(newspells);</pre></div>
 
-<p>-&gt; {"fire": 5, "ice": 4, "electro": 6, "wind": 7}</p>
+<pre><code>-&gt; {"fire": 5, "ice": 4, "electro": 6, "wind": 7}
+</code></pre>
 
-<p><strong>Object.remove("key");</strong></p>
+<p><strong>Object.remove(keys);</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
 <span class="pl-smi">spells</span>.<span class="pl-en">remove</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);</pre></div>
 
-<p>-&gt; {"ice": 4, "electro": 6, "wind": 7}</p>
+<pre><code>-&gt; {"ice": 4, "electro": 6, "wind": 7}
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spells <span class="pl-k">=</span> {<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">5</span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">4</span>, <span class="pl-s"><span class="pl-pds">"</span>electro<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>wind<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">7</span>};
 <span class="pl-smi">spells</span>.<span class="pl-en">remove</span>([<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ice<span class="pl-pds">"</span></span>]);</pre></div>
 
-<p>-&gt; {"electro": 6, "wind": 7}</p>
+<pre><code>-&gt; {"electro": 6, "wind": 7}
+</code></pre>
 
 <p><strong>Object.isObject();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
 <span class="pl-smi">list</span>.<span class="pl-en">isObject</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <p><strong>Boolean.isBoolean();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> boh <span class="pl-k">=</span> <span class="pl-c1">false</span>;
 <span class="pl-smi">boh</span>.<span class="pl-en">isBoolean</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <p><strong>Function.isFunction();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> <span class="pl-en">fun</span> <span class="pl-k">=</span> <span class="pl-k">function</span> () { <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">"</span>hi<span class="pl-pds">"</span></span>; };
 <span class="pl-smi">fun</span>.<span class="pl-en">isFunction</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <p><strong>String.isString();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> talk <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>hi!<span class="pl-pds">"</span></span>;
 <span class="pl-smi">talk</span>.<span class="pl-en">isString</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <p><strong>String.repeatify(num);</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>hi<span class="pl-pds">"</span></span>.<span class="pl-en">reatify</span>(<span class="pl-c1">5</span>);</pre></div>
 
-<p>-&gt; ['hi','hi','hi','hi','hi']</p>
+<pre><code>-&gt; ['hi','hi','hi','hi','hi']
+</code></pre>
 
-<p><strong>Number.times();</strong></p>
+<p><strong>(Number).times(callback(iteration)); Iterates function "number" times.</strong></p>
 
-<div class="highlight highlight-source-js"><pre>(<span class="pl-c1">3</span>).<span class="pl-en">times</span>(<span class="pl-k">function</span> () {
+<div class="highlight highlight-source-js"><pre>(<span class="pl-c1">3</span>).<span class="pl-en">times</span>(<span class="pl-k">function</span> (<span class="pl-smi">i</span>) {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi!<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; hi!</p>
-
-<p>-&gt; hi!</p>
-
-<p>-&gt; hi!</p>
+<pre><code>-&gt; hi!
+-&gt; hi!
+-&gt; hi!
+</code></pre>
 
 <p><strong>Number.isNumber();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> num <span class="pl-k">=</span> <span class="pl-c1">5.2</span>;
 <span class="pl-smi">num</span>.<span class="pl-en">isNumber</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <p><strong>Number.isInteger();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> num <span class="pl-k">=</span> <span class="pl-c1">5</span>;
 <span class="pl-smi">num</span>.<span class="pl-en">isInteger</span>();</pre></div>
 
-<p>-&gt; true</p>
+<pre><code>-&gt; true
+</code></pre>
 
 <h2>
 <a id="tools" class="anchor" href="#tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TOOLS:</h2>
@@ -284,19 +299,23 @@
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-c1">0</span>,<span class="pl-c1">10</span>);</pre></div>
 
-<p>-&gt; [0,1,2,3,4,5,6,7,8,9,10]</p>
+<pre><code>-&gt; [0,1,2,3,4,5,6,7,8,9,10]
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-k">-</span><span class="pl-c1">100</span>,<span class="pl-c1">100</span>,<span class="pl-c1">20</span>);</pre></div>
 
-<p>-&gt; [-100,-80,-60,-40,-20,0,20,40,60,80,100]</p>
+<pre><code>-&gt; [-100,-80,-60,-40,-20,0,20,40,60,80,100]
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>F<span class="pl-pds">'</span></span>);</pre></div>
 
-<p>-&gt; ['A','B','C','D','E','F')</p>
+<pre><code>-&gt; ['A','B','C','D','E','F')
+</code></pre>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>m<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>r<span class="pl-pds">'</span></span>);</pre></div>
 
-<p>-&gt; ['m','n','o','p','q','r']</p>
+<pre><code>-&gt; ['m','n','o','p','q','r']
+</code></pre>
 
 <p><strong>Clone Object in javascript ES5 with ES6 style:</strong></p>
 
@@ -305,9 +324,8 @@
 
 <p><strong>Remove Objects from Array:</strong></p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, obj);</pre></div>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, [obj1, obj2]);</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, [obj1, obj2]);</pre></div>
 
 <p><strong>Clear all values from Array:</strong></p>
 
@@ -318,81 +336,99 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">contains</span>(array, obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">inArray</span>(array, obj);</pre></div>
 
-<p><strong>Array iteration with end function</strong></p>
+<p><strong>sb.each(array, callback_loop(item, index)); Array iteration.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">res</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; a // Wait 5 seconds</p>
+<pre><code>-&gt; item: a
+-&gt; item: b
+-&gt; item: c
+</code></pre>
 
-<p>-&gt; b // Wait 5 seconds</p>
-
-<p>-&gt; c</p>
-
-<p>-&gt; End</p>
-
-<p><strong>Array iteration with time interval and end function</strong></p>
+<p><strong>sb.each(array, callback_loop(item, index), callback_end); Array iteration with ending function.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">res</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; a // Wait 5 seconds</p>
+<pre><code>-&gt; item: a
+-&gt; item: b
+-&gt; item: c
+-&gt; End
+</code></pre>
 
-<p>-&gt; b // Wait 5 seconds</p>
-
-<p>-&gt; c</p>
-
-<p>-&gt; End</p>
-
-<p><strong>Run next when the method "done" is executed.</strong></p>
+<p><strong>sb.each(array, interval, callback_loop(item, index), callback_end); Iteration with time interval and ending function.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">eachEnd</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">res</span>, <span class="pl-smi">i</span>, <span class="pl-smi">done</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>res: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> res );
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<pre><code>-&gt; item: a // Wait 5 seconds
+-&gt; item: b // Wait 5 seconds
+-&gt; item: c
+-&gt; End
+</code></pre>
+
+<p><strong>sb.eachEnd(array, callback_loop(item, index, next_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">eachEnd</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
     <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-en">done</span>();
+        <span class="pl-en">next</span>();
     }, <span class="pl-c1">8000</span>);
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<p>-&gt; a // Wait 8 seconds;</p>
+<pre><code>-&gt; item: a // Wait 8 seconds;
+-&gt; item: b // Wait 8 seconds;
+-&gt; item: c // Wait 8 seconds;
+-&gt; End
+</code></pre>
 
-<p>-&gt; b // Wait 8 seconds;</p>
+<p><strong>sb.times(number, callback(iteration)); Iterates function "number" times.</strong></p>
 
-<p>-&gt; c // Wait 8 seconds;</p>
-
-<p><strong>Iterators:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">times</span>(<span class="pl-c1">10</span>, <span class="pl-k">function</span> () {
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">times</span>(<span class="pl-c1">3</span>, <span class="pl-k">function</span> (<span class="pl-smi">iteration</span>) {
         <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Abracadabra!<span class="pl-pds">"</span></span>);
 });</pre></div>
+
+<pre><code>-&gt; Abracadabra!
+-&gt; Abracadabra!
+-&gt; Abracadabra!
+</code></pre>
 
 <p><strong>Random number:</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-c1">random</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>);</pre></div>
 
-<p>-&gt; 6</p>
+<pre><code>-&gt; 6
+</code></pre>
 
 <p><strong>Real date validator:</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">checkDate</span>(<span class="pl-s"><span class="pl-pds">'</span>dd-mm-yyyy<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>30/02/2015<span class="pl-pds">'</span></span>);</pre></div>
 
-<p>-&gt; false</p>
+<pre><code>-&gt; false
+</code></pre>
 
 <p><strong>Limit of words:</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">excerpt</span>(<span class="pl-s"><span class="pl-pds">'</span>One, two, Freddy<span class="pl-cce">\'</span>s coming for you<span class="pl-pds">'</span></span>, <span class="pl-c1">3</span>);</pre></div>
 
-<p>-&gt; 'One, two, Freddy's'</p>
+<pre><code>-&gt; 'One, two, Freddy's'
+</code></pre>
 
 <p><strong>Class boolean check:</strong></p>
 
