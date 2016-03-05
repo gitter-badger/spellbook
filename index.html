@@ -19,7 +19,11 @@
     </section>
 
     <section class="main-content">
-      <h2>
+      <p><a href="http://www.spellbook.io">http://www.spellbook.io</a></p>
+
+<p><a href="http://npmjs.com/package/spellbook">http://npmjs.com/package/spellbook</a></p>
+
+<h2>
 <a id="installdownload" class="anchor" href="#installdownload" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALL/DOWNLOAD</h2>
 
 <div class="highlight highlight-source-shell"><pre>npm install spellbook</pre></div>
@@ -129,64 +133,47 @@
 <pre><code>-&gt; true
 </code></pre>
 
-<p><strong>Array.each(callback_loop(item, index)); Array iteration.</strong></p>
+<p><strong>Array.each(callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>index: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i <span class="pl-k">+</span><span class="pl-s"><span class="pl-pds">"</span> item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-});</pre></div>
-
-<pre><code>-&gt; item: a
--&gt; item: b
--&gt; item: c
-</code></pre>
-
-<p><strong>Array.each(callback_loop(item, index), callback_end); Array iteration with ending function.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a
--&gt; item: b
--&gt; item: c
--&gt; End
-</code></pre>
-
-<p><strong>Array.each(interval, callback_loop(item, index), callback_end); Iteration with time interval and ending function.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a // Wait 5 seconds
--&gt; item: b // Wait 5 seconds
--&gt; item: c
--&gt; End
-</code></pre>
-
-<p><strong>Array.eachEnd(callback_loop(item, index, next_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-en">eachEnd</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>) {
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
     <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
         <span class="pl-en">next</span>();
-    }, <span class="pl-c1">8000</span>);
+    }, <span class="pl-c1">3000</span>);
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<pre><code>-&gt; item: a // Wait 8 seconds;
--&gt; item: b // Wait 8 seconds;
--&gt; item: c // Wait 8 seconds;
+<pre><code>-&gt; item: a // Wait 3 seconds;
+-&gt; item: b // Wait 3 seconds;
+-&gt; item: c // Wait 3 seconds;
 -&gt; End
+</code></pre>
+
+<p><strong>Array.each(callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed. Call "end" method for break the loop.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">list</span>.<span class="pl-en">each</span>(<span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-k">if</span> (i <span class="pl-k">===</span> <span class="pl-c1">1</span>) {
+            <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Bye!<span class="pl-pds">"</span></span>);
+        } <span class="pl-k">else</span> {
+            <span class="pl-en">next</span>();
+        }
+    }, <span class="pl-c1">3000</span>);
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-k">if</span> (data) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+    } <span class="pl-k">else</span> {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+    }
+});</pre></div>
+
+<pre><code>-&gt; item: a // Wait 3 seconds;
+-&gt; item: b // Wait 3 seconds;
+-&gt; End: Bye!
 </code></pre>
 
 <p><strong>Object.getKeys(keys);</strong></p>
@@ -336,66 +323,123 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">contains</span>(array, obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">inArray</span>(array, obj);</pre></div>
 
-<p><strong>sb.each(array, callback_loop(item, index)); Array iteration.</strong></p>
+<p><strong>sb.each(array, callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a
--&gt; item: b
--&gt; item: c
-</code></pre>
-
-<p><strong>sb.each(array, callback_loop(item, index), callback_end); Array iteration with ending function.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a
--&gt; item: b
--&gt; item: c
--&gt; End
-</code></pre>
-
-<p><strong>sb.each(array, interval, callback_loop(item, index), callback_end); Iteration with time interval and ending function.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-c1">5000</span>, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a // Wait 5 seconds
--&gt; item: b // Wait 5 seconds
--&gt; item: c
--&gt; End
-</code></pre>
-
-<p><strong>sb.eachEnd(array, callback_loop(item, index, next_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">eachEnd</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>) {
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
     <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
         <span class="pl-en">next</span>();
-    }, <span class="pl-c1">8000</span>);
+    }, <span class="pl-c1">3000</span>);
 }, <span class="pl-k">function</span> () {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
 });</pre></div>
 
-<pre><code>-&gt; item: a // Wait 8 seconds;
--&gt; item: b // Wait 8 seconds;
--&gt; item: c // Wait 8 seconds;
+<pre><code>-&gt; item: a // Wait 3 seconds;
+-&gt; item: b // Wait 3 seconds;
+-&gt; item: c // Wait 3 seconds;
 -&gt; End
+</code></pre>
+
+<p><strong>sb.each(callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed. Call "end" method for break the loop.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-k">if</span> (i <span class="pl-k">===</span> <span class="pl-c1">1</span>) {
+            <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Bye!<span class="pl-pds">"</span></span>);
+        } <span class="pl-k">else</span> {
+            <span class="pl-en">next</span>();
+        }
+    }, <span class="pl-c1">3000</span>);
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-k">if</span> (data) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+    } <span class="pl-k">else</span> {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+    }
+});</pre></div>
+
+<pre><code>-&gt; item: a // Wait 3 seconds;
+-&gt; item: b // Wait 3 seconds;
+-&gt; End: Bye!
+</code></pre>
+
+<p><strong>sb.waterfall(functions_array, callback_end); Runs next function when "done" method is executed.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">waterfall</span>([
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);
+        <span class="pl-en">done</span>(<span class="pl-c1">5</span>);
+    },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>, <span class="pl-smi">data</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ice: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+        <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>win<span class="pl-pds">"</span></span>);
+    }
+], <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+});</pre></div>
+
+<pre><code>-&gt; fire
+-&gt; ice: 5
+-&gt; End: win
+</code></pre>
+
+<p><strong>sb.waterfall Break the fall with "true"</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">waterfall</span>([
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);
+        <span class="pl-en">done</span>(<span class="pl-c1">true</span>, <span class="pl-c1">5</span>);
+    },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>, <span class="pl-smi">data</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ice: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+        <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>win<span class="pl-pds">"</span></span>);
+    }
+], <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+});</pre></div>
+
+<pre><code>-&gt; fire
+-&gt; End: 5
+</code></pre>
+
+<p><strong>sb.forever Loops forever</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">forever</span>(<span class="pl-k">function</span> (<span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Hi!<span class="pl-pds">"</span></span>)
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">next</span>();
+    }, <span class="pl-c1">3000</span>);
+});</pre></div>
+
+<pre><code>-&gt; Hi! // Wait 3 seconds;
+-&gt; Hi! // Wait 3 seconds;
+-&gt; ...
+</code></pre>
+
+<p><strong>sb.forever Loops forever and break the loop</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+<span class="pl-smi">sb</span>.<span class="pl-en">forever</span>(<span class="pl-k">function</span> (<span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>loop: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i);
+    <span class="pl-k">if</span> (i<span class="pl-k">&gt;=</span><span class="pl-c1">3</span>) {
+        <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Now Break!!<span class="pl-pds">"</span></span>)
+    }
+    i<span class="pl-k">++</span>;
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">next</span>();
+    }, <span class="pl-c1">3000</span>);
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Response: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+});</pre></div>
+
+<pre><code>-&gt; loop: 0 // Wait 3 seconds;
+-&gt; loop: 1 // Wait 3 seconds;
+-&gt; loop: 2 // Wait 3 seconds;
+-&gt; loop: 3 // Wait 3 seconds;
+-&gt; Response: Now Break!!
 </code></pre>
 
 <p><strong>sb.times(number, callback(iteration)); Iterates function "number" times.</strong></p>
