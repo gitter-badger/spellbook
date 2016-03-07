@@ -329,6 +329,20 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">contains</span>(array, obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">inArray</span>(array, obj);</pre></div>
 
+<p><strong>Get the element from the object "obj":</strong></p>
+
+<pre><code>var a = {
+    a : {
+        b : ["c", "d"]
+    }
+}
+
+sb.get(a, "a.b.1");
+</code></pre>
+
+<pre><code>-&gt; d
+</code></pre>
+
 <p><strong>sb.each(array, callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
