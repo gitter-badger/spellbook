@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Spellbook.js by warlock</title>
+    <title>Spellbook by warlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -31,9 +31,9 @@
 <h2>
 <a id="minified-cdn" class="anchor" href="#minified-cdn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MINIFIED CDN</h2>
 
-<pre><code>http://cdn.spellbook.io/spellbook.js
-https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.44/spellbook.min.js
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.44/spellbook.min.js
 https://cdn.rawgit.com/warlock/spellbook/minified/spellbook-min.js
+http://cdn.spellbook.io/spellbook.js
 </code></pre>
 
 <h2>
@@ -456,6 +456,43 @@ https://cdn.rawgit.com/warlock/spellbook/minified/spellbook-min.js
 -&gt; hi 2! //Wait 1 second
 -&gt; hi 3!
 -&gt; End: ["a","b","c"]
+</code></pre>
+
+<p><strong>sb.parallelLimit(number, array_functions(done), callback_end(data)); Run limit of functions in parallel and then execute "callback_end".</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">parallelLimit</span>(<span class="pl-c1">2</span>, [
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 1!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 2!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 3!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 4!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 5!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 6!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 7!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 8!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 9!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); }
+],<span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>we: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">JSON</span>.<span class="pl-en">stringify</span>(data));
+});</pre></div>
+
+<pre><code>-&gt; go 1!
+-&gt; go 3!
+-&gt; go 2!
+-&gt; go 5!
+-&gt; go 4!
+-&gt; go 7!
+-&gt; go 6!
+-&gt; go 9!
+-&gt; go 8!
+-&gt; we: ["a","b","c","a2","b2","c2","a3","b3","c3"]
 </code></pre>
 
 <p><strong>sb.forever(callback(next, end), callback_end); Loops forever.</strong></p>
