@@ -19,9 +19,7 @@
     </section>
 
     <section class="main-content">
-      <p><a href="http://www.spellbook.io">http://www.spellbook.io</a></p>
-
-<p><a href="http://npmjs.com/package/spellbook">http://npmjs.com/package/spellbook</a></p>
+      <p><a href="http://npmjs.com/package/spellbook">http://npmjs.com/package/spellbook</a></p>
 
 <h2>
 <a id="installdownload" class="anchor" href="#installdownload" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALL/DOWNLOAD</h2>
@@ -31,7 +29,7 @@
 <h2>
 <a id="minified-cdn" class="anchor" href="#minified-cdn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MINIFIED CDN</h2>
 
-<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.52/spellbook.min.js
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.54/spellbook.min.js
 https://cdn.rawgit.com/warlock/spellbook/minified/spellbook-min.js
 https://gitcdn.xyz/repo/warlock/spellbook/minified/spellbook-min.js
 http://cdn.spellbook.io/spellbook.js
@@ -89,7 +87,7 @@ http://cdn.spellbook.io/spellbook.js
 <p><strong>Array.random();</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">list</span>.<span class="pl-c1">random</span>();</pre></div>
+<span class="pl-smi">list</span>.<span class="pl-en">random</span>();</pre></div>
 
 <pre><code>-&gt; 'b'
 </code></pre>
@@ -252,6 +250,14 @@ http://cdn.spellbook.io/spellbook.js
 <span class="pl-smi">talk</span>.<span class="pl-en">isString</span>();</pre></div>
 
 <pre><code>-&gt; true
+</code></pre>
+
+<p><strong>String.capitalize();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> spell <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>abracadabra<span class="pl-pds">"</span></span>;
+<span class="pl-smi">spell</span>.<span class="pl-en">capitalize</span>();</pre></div>
+
+<pre><code>-&gt; Abracadabra
 </code></pre>
 
 <p><strong>String.repeatify(num);</strong></p>
@@ -563,9 +569,32 @@ http://cdn.spellbook.io/spellbook.js
 -&gt; Abracadabra!
 </code></pre>
 
+<p><strong>sb.forSync(initial_value, final_value, incremental_value, callback(index, next, end), callback_end(data))</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">forSync</span>(<span class="pl-c1">0</span>, <span class="pl-c1">10</span>, <span class="pl-c1">1</span>, <span class="pl-k">function</span> (<span class="pl-smi">index</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(index)
+    <span class="pl-en">next</span>(<span class="pl-c1">5</span>)
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data)
+})</pre></div>
+
+<pre><code>-&gt; 0
+-&gt; 1
+-&gt; 2
+-&gt; 3
+-&gt; 4
+-&gt; 5
+-&gt; 6
+-&gt; 7
+-&gt; 8
+-&gt; 9
+-&gt; 10
+-&gt; [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+</code></pre>
+
 <p><strong>Random number:</strong></p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-c1">random</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>);</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">random</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>);</pre></div>
 
 <pre><code>-&gt; 6
 </code></pre>
