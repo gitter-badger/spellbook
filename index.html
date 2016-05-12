@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Spellbook.JS - Library for extend the javascript habilities</title>
+    <title>Spellbook by warlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -29,7 +29,7 @@
 <h2>
 <a id="minified-cdn" class="anchor" href="#minified-cdn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MINIFIED CDN</h2>
 
-<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.55/spellbook.min.js
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.56/spellbook.min.js
 https://cdn.rawgit.com/warlock/spellbook/minified/spellbook-min.js
 https://gitcdn.xyz/repo/warlock/spellbook/minified/spellbook-min.js
 http://cdn.spellbook.io/spellbook.js
@@ -266,6 +266,10 @@ http://cdn.spellbook.io/spellbook.js
 
 <pre><code>-&gt; ['hi','hi','hi','hi','hi']
 </code></pre>
+
+<p><strong>String.dos2unix(); Replace dos endline</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">string</span>.<span class="pl-en">dos2unix</span>();</pre></div>
 
 <p><strong>(Number).times(callback(iteration)); Iterates function "number" times.</strong></p>
 
@@ -606,6 +610,10 @@ http://cdn.spellbook.io/spellbook.js
 <pre><code>-&gt; Abracadabra
 </code></pre>
 
+<p><strong>sb.dos2unix(string); Replace dos endline</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">dos2unix</span>(string);</pre></div>
+
 <p><strong>Real date validator:</strong></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">checkDate</span>(<span class="pl-s"><span class="pl-pds">'</span>dd-mm-yyyy<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>30/02/2015<span class="pl-pds">'</span></span>);</pre></div>
@@ -629,6 +637,19 @@ http://cdn.spellbook.io/spellbook.js
 <span class="pl-smi">sb</span>.<span class="pl-en">isInteger</span>(obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">isString</span>(obj);
 <span class="pl-smi">sb</span>.<span class="pl-en">isBoolean</span>(obj);</pre></div>
+
+<h2>
+<a id="nodejs-tools" class="anchor" href="#nodejs-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node.js TOOLS:</h2>
+
+<p><strong>sb.cp("file","copy"); Copy file with Promises</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">cp</span>(<span class="pl-s"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>copyfile.txt<span class="pl-pds">"</span></span>)
+.<span class="pl-en">then</span>(<span class="pl-k">function</span> (<span class="pl-smi">res</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>OK<span class="pl-pds">"</span></span>);
+})
+.<span class="pl-en">catch</span>(<span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(err);
+})</pre></div>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
