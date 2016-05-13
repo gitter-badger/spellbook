@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Spellbook.js - Library for extend the javascript habilities.</title>
+    <title>Spellbook by warlock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -22,6 +22,8 @@
       <h2>
 <a id="installdownload" class="anchor" href="#installdownload" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INSTALL/DOWNLOAD</h2>
 
+<p><a href="http://www.spellbook.io">http://www.spellbook.io</a></p>
+
 <p><a href="http://npmjs.com/package/spellbook">http://npmjs.com/package/spellbook</a></p>
 
 <div class="highlight highlight-source-shell"><pre>npm install spellbook</pre></div>
@@ -29,7 +31,7 @@
 <h2>
 <a id="minified-cdn" class="anchor" href="#minified-cdn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MINIFIED CDN</h2>
 
-<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.56/spellbook.min.js
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/spellbook/0.0.57/spellbook.min.js
 https://cdn.rawgit.com/warlock/spellbook/minified/spellbook-min.js
 https://gitcdn.xyz/repo/warlock/spellbook/minified/spellbook-min.js
 http://cdn.spellbook.io/spellbook.js
@@ -49,11 +51,358 @@ http://cdn.spellbook.io/spellbook.js
 <span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h2>
+<a id="generic-tools" class="anchor" href="#generic-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generic tools:</h2>
+
+<p><strong>Range:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-c1">0</span>,<span class="pl-c1">10</span>);</pre></div>
+
+<pre><code>-&gt; [0,1,2,3,4,5,6,7,8,9,10]
+</code></pre>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-k">-</span><span class="pl-c1">100</span>,<span class="pl-c1">100</span>,<span class="pl-c1">20</span>);</pre></div>
+
+<pre><code>-&gt; [-100,-80,-60,-40,-20,0,20,40,60,80,100]
+</code></pre>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>F<span class="pl-pds">'</span></span>);</pre></div>
+
+<pre><code>-&gt; ['A','B','C','D','E','F')
+</code></pre>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>m<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>r<span class="pl-pds">'</span></span>);</pre></div>
+
+<pre><code>-&gt; ['m','n','o','p','q','r']
+</code></pre>
+
+<p><strong>Clone Object in javascript ES5 with ES6 style:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">assing</span>(obj);
+<span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">clone</span>(obj);</pre></div>
+
+<p><strong>Remove Objects from Array:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, [obj1, obj2]);</pre></div>
+
+<p><strong>Clear all values from Array:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-c1">clear</span>(array);</pre></div>
+
+<p><strong>Find Objects from Array:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">contains</span>(array, obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">inArray</span>(array, obj);</pre></div>
+
+<p><strong>Get the element from the object "obj":</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> {
+    a <span class="pl-k">:</span> {
+        b <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>d<span class="pl-pds">"</span></span>]
+    }
+};
+
+<span class="pl-smi">sb</span>.<span class="pl-en">get</span>(a, <span class="pl-s"><span class="pl-pds">"</span>a.b.1<span class="pl-pds">"</span></span>);</pre></div>
+
+<pre><code>-&gt; d
+</code></pre>
+
+<p><strong>Random number:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">random</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>);</pre></div>
+
+<pre><code>-&gt; 6
+</code></pre>
+
+<p><strong>sb.capitalize();</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">capitalize</span>(<span class="pl-s"><span class="pl-pds">"</span>abracadabra<span class="pl-pds">"</span></span>);</pre></div>
+
+<pre><code>-&gt; Abracadabra
+</code></pre>
+
+<p><strong>sb.dos2unix(string); Replace dos endline</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">dos2unix</span>(string);</pre></div>
+
+<p><strong>Real date validator:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">checkDate</span>(<span class="pl-s"><span class="pl-pds">'</span>dd-mm-yyyy<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>30/02/2015<span class="pl-pds">'</span></span>);</pre></div>
+
+<pre><code>-&gt; false
+</code></pre>
+
+<p><strong>Limit of words:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">excerpt</span>(<span class="pl-s"><span class="pl-pds">'</span>One, two, Freddy<span class="pl-cce">\'</span>s coming for you<span class="pl-pds">'</span></span>, <span class="pl-c1">3</span>);</pre></div>
+
+<pre><code>-&gt; 'One, two, Freddy's'
+</code></pre>
+
+<p><strong>Class boolean check:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">isFunction</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isArray</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isObject</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isNumber</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isInteger</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isString</span>(obj);
+<span class="pl-smi">sb</span>.<span class="pl-en">isBoolean</span>(obj);</pre></div>
+
+<h2>
+<a id="iterators" class="anchor" href="#iterators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Iterators</h2>
+
+<p><strong>sb.each(array, callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">next</span>();
+    }, <span class="pl-c1">3000</span>);
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<pre><code>-&gt; item: a // Wait 3 seconds;
+-&gt; item: b // Wait 3 seconds;
+-&gt; item: c // Wait 3 seconds;
+-&gt; End
+</code></pre>
+
+<p><strong>sb.each(callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed. Call "end" method for break the loop.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-k">if</span> (i <span class="pl-k">===</span> <span class="pl-c1">1</span>) {
+            <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Bye!<span class="pl-pds">"</span></span>);
+        } <span class="pl-k">else</span> {
+            <span class="pl-en">next</span>();
+        }
+    }, <span class="pl-c1">3000</span>);
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-k">if</span> (data) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+    } <span class="pl-k">else</span> {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+    }
+});</pre></div>
+
+<pre><code>-&gt; item: a // Wait 3 seconds;
+-&gt; item: b // Wait 3 seconds;
+-&gt; End: Bye!
+</code></pre>
+
+<p><strong>sb.eachParallelLimit(array, number_limit, callback_loop(item, index, next_method), callback_end); Runs in parallel limit and next loop when "next" method is executed. Alternative names: eachpl, epl.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>];
+<span class="pl-smi">sb</span>.<span class="pl-en">eachpl</span>(list, <span class="pl-c1">2</span>, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">next</span>();
+    }, <span class="pl-c1">2000</span>);
+}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<pre><code>-&gt; item: a
+-&gt; item: b
+-&gt; item: c // Next to start when next method executed;
+-&gt; item: d // Next to start when next method executed;
+-&gt; End
+</code></pre>
+
+<p><strong>sb.waterfall(functions_array, callback_end); Runs next function when "done" method is executed.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">waterfall</span>([
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);
+        <span class="pl-en">done</span>(<span class="pl-c1">5</span>);
+    },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>, <span class="pl-smi">data</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ice: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+        <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>win<span class="pl-pds">"</span></span>);
+    }
+], <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+});</pre></div>
+
+<pre><code>-&gt; fire
+-&gt; ice: 5
+-&gt; End: win
+</code></pre>
+
+<p><strong>sb.waterfall(array_functions(done, data), callback_end); Break the fall with "true".</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">waterfall</span>([
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);
+        <span class="pl-en">done</span>(<span class="pl-c1">true</span>, <span class="pl-c1">5</span>);
+    },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>, <span class="pl-smi">data</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ice: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+        <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>win<span class="pl-pds">"</span></span>);
+    }
+], <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+});</pre></div>
+
+<pre><code>-&gt; fire
+-&gt; End: 5
+</code></pre>
+
+<p><strong>sb.parallel(array_functions(done), callback_end(data)); Run functions in parallel and then execute "callback_end".</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">parallel</span>([
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi 3!<span class="pl-pds">"</span></span>);
+            <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>)
+        }, <span class="pl-c1">3000</span>);
+    },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi 2!<span class="pl-pds">"</span></span>);
+            <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b<span class="pl-pds">"</span></span>);
+        }, <span class="pl-c1">2000</span>);
+    },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi 1!<span class="pl-pds">"</span></span>);
+            <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>);
+        }, <span class="pl-c1">1000</span>);
+    }
+],<span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">JSON</span>.<span class="pl-en">stringify</span>(data));
+});</pre></div>
+
+<pre><code>//Wait 1 second
+-&gt; hi 1! //Wait 1 second
+-&gt; hi 2! //Wait 1 second
+-&gt; hi 3!
+-&gt; End: ["a","b","c"]
+</code></pre>
+
+<p><strong>sb.parallelLimit(number, array_functions(done), callback_end(data)); Run limit of functions in parallel and then execute "callback_end".</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">parallelLimit</span>(<span class="pl-c1">2</span>, [
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 1!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 2!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 3!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 4!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 5!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 6!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 7!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 8!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
+    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
+        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 9!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); }
+],<span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>we: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">JSON</span>.<span class="pl-en">stringify</span>(data));
+});</pre></div>
+
+<pre><code>-&gt; go 1!
+-&gt; go 3!
+-&gt; go 2!
+-&gt; go 5!
+-&gt; go 4!
+-&gt; go 7!
+-&gt; go 6!
+-&gt; go 9!
+-&gt; go 8!
+-&gt; we: ["a","b","c","a2","b2","c2","a3","b3","c3"]
+</code></pre>
+
+<p><strong>sb.forever(callback(next, end), callback_end); Loops forever.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">forever</span>(<span class="pl-k">function</span> (<span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Hi!<span class="pl-pds">"</span></span>)
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">next</span>();
+    }, <span class="pl-c1">3000</span>);
+});</pre></div>
+
+<pre><code>-&gt; Hi! // Wait 3 seconds;
+-&gt; Hi! // Wait 3 seconds;
+-&gt; ...
+</code></pre>
+
+<p><strong>sb.forever(callback(next, end), callback_end); Loops forever and break the loop.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>;
+<span class="pl-smi">sb</span>.<span class="pl-en">forever</span>(<span class="pl-k">function</span> (<span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>loop: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i);
+    <span class="pl-k">if</span> (i<span class="pl-k">&gt;=</span><span class="pl-c1">3</span>) {
+        <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Now Break!!<span class="pl-pds">"</span></span>)
+    }
+    i<span class="pl-k">++</span>;
+    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
+        <span class="pl-en">next</span>();
+    }, <span class="pl-c1">3000</span>);
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Response: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
+});</pre></div>
+
+<pre><code>-&gt; loop: 0 // Wait 3 seconds;
+-&gt; loop: 1 // Wait 3 seconds;
+-&gt; loop: 2 // Wait 3 seconds;
+-&gt; loop: 3 // Wait 3 seconds;
+-&gt; Response: Now Break!!
+</code></pre>
+
+<p><strong>sb.times(number, callback(iteration)); Iterates function "number" times.</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">times</span>(<span class="pl-c1">3</span>, <span class="pl-k">function</span> (<span class="pl-smi">iteration</span>) {
+        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Abracadabra!<span class="pl-pds">"</span></span>);
+});</pre></div>
+
+<pre><code>-&gt; Abracadabra!
+-&gt; Abracadabra!
+-&gt; Abracadabra!
+</code></pre>
+
+<p><strong>sb.forSync(initial_value, final_value, incremental_value, callback(index, next, end), callback_end(data))</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">forSync</span>(<span class="pl-c1">0</span>, <span class="pl-c1">10</span>, <span class="pl-c1">1</span>, <span class="pl-k">function</span> (<span class="pl-smi">index</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(index)
+    <span class="pl-en">next</span>(<span class="pl-c1">5</span>)
+}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data)
+})</pre></div>
+
+<pre><code>-&gt; 0
+-&gt; 1
+-&gt; 2
+-&gt; 3
+-&gt; 4
+-&gt; 5
+-&gt; 6
+-&gt; 7
+-&gt; 8
+-&gt; 9
+-&gt; 10
+-&gt; [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
+</code></pre>
+
+<h2>
 <a id="class-extension" class="anchor" href="#class-extension" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CLASS EXTENSION</h2>
 
 <blockquote>
 <p>Existing class methods will be ignored</p>
 </blockquote>
+
+<p><strong>START CLASS EXTENDER</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">extender</span>()</pre></div>
 
 <p><strong>Array.remove(obj);</strong></p>
 
@@ -299,347 +648,7 @@ http://cdn.spellbook.io/spellbook.js
 </code></pre>
 
 <h2>
-<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TOOLS:</h2>
-
-<p><strong>Range:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-c1">0</span>,<span class="pl-c1">10</span>);</pre></div>
-
-<pre><code>-&gt; [0,1,2,3,4,5,6,7,8,9,10]
-</code></pre>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-k">-</span><span class="pl-c1">100</span>,<span class="pl-c1">100</span>,<span class="pl-c1">20</span>);</pre></div>
-
-<pre><code>-&gt; [-100,-80,-60,-40,-20,0,20,40,60,80,100]
-</code></pre>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>F<span class="pl-pds">'</span></span>);</pre></div>
-
-<pre><code>-&gt; ['A','B','C','D','E','F')
-</code></pre>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">range</span>(<span class="pl-s"><span class="pl-pds">'</span>m<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>r<span class="pl-pds">'</span></span>);</pre></div>
-
-<pre><code>-&gt; ['m','n','o','p','q','r']
-</code></pre>
-
-<p><strong>Clone Object in javascript ES5 with ES6 style:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">assing</span>(obj);
-<span class="pl-k">var</span> NewObject <span class="pl-k">=</span> <span class="pl-smi">sb</span>.<span class="pl-en">clone</span>(obj);</pre></div>
-
-<p><strong>Remove Objects from Array:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">remove</span>(array, [obj1, obj2]);</pre></div>
-
-<p><strong>Clear all values from Array:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-c1">clear</span>(array);</pre></div>
-
-<p><strong>Find Objects from Array:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">contains</span>(array, obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">inArray</span>(array, obj);</pre></div>
-
-<p><strong>Get the element from the object "obj":</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> a <span class="pl-k">=</span> {
-    a <span class="pl-k">:</span> {
-        b <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>d<span class="pl-pds">"</span></span>]
-    }
-};
-
-<span class="pl-smi">sb</span>.<span class="pl-en">get</span>(a, <span class="pl-s"><span class="pl-pds">"</span>a.b.1<span class="pl-pds">"</span></span>);</pre></div>
-
-<pre><code>-&gt; d
-</code></pre>
-
-<p><strong>sb.each(array, callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-en">next</span>();
-    }, <span class="pl-c1">3000</span>);
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a // Wait 3 seconds;
--&gt; item: b // Wait 3 seconds;
--&gt; item: c // Wait 3 seconds;
--&gt; End
-</code></pre>
-
-<p><strong>sb.each(callback_loop(item, index, next_method, end_method), callback_end); Runs next loop when "next" method is executed. Call "end" method for break the loop.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">each</span>(list, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-k">if</span> (i <span class="pl-k">===</span> <span class="pl-c1">1</span>) {
-            <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Bye!<span class="pl-pds">"</span></span>);
-        } <span class="pl-k">else</span> {
-            <span class="pl-en">next</span>();
-        }
-    }, <span class="pl-c1">3000</span>);
-}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-    <span class="pl-k">if</span> (data) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
-    } <span class="pl-k">else</span> {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-    }
-});</pre></div>
-
-<pre><code>-&gt; item: a // Wait 3 seconds;
--&gt; item: b // Wait 3 seconds;
--&gt; End: Bye!
-</code></pre>
-
-<p><strong>sb.eachParallelLimit(array, number_limit, callback_loop(item, index, next_method), callback_end); Runs in parallel limit and next loop when "next" method is executed. Alternative names: eachpl, epl.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> list <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>b<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>];
-<span class="pl-smi">sb</span>.<span class="pl-en">eachpl</span>(list, <span class="pl-c1">2</span>, <span class="pl-k">function</span> (<span class="pl-smi">item</span>, <span class="pl-smi">i</span>, <span class="pl-smi">next</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>item: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> item );
-    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-en">next</span>();
-    }, <span class="pl-c1">2000</span>);
-}, <span class="pl-k">function</span> () {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; item: a
--&gt; item: b
--&gt; item: c // Next to start when next method executed;
--&gt; item: d // Next to start when next method executed;
--&gt; End
-</code></pre>
-
-<p><strong>sb.waterfall(functions_array, callback_end); Runs next function when "done" method is executed.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">waterfall</span>([
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);
-        <span class="pl-en">done</span>(<span class="pl-c1">5</span>);
-    },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>, <span class="pl-smi">data</span>) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ice: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
-        <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>win<span class="pl-pds">"</span></span>);
-    }
-], <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
-});</pre></div>
-
-<pre><code>-&gt; fire
--&gt; ice: 5
--&gt; End: win
-</code></pre>
-
-<p><strong>sb.waterfall(array_functions(done, data), callback_end); Break the fall with "true".</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">waterfall</span>([
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>fire<span class="pl-pds">"</span></span>);
-        <span class="pl-en">done</span>(<span class="pl-c1">true</span>, <span class="pl-c1">5</span>);
-    },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>, <span class="pl-smi">data</span>) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>ice: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
-        <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>win<span class="pl-pds">"</span></span>);
-    }
-], <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
-});</pre></div>
-
-<pre><code>-&gt; fire
--&gt; End: 5
-</code></pre>
-
-<p><strong>sb.parallel(array_functions(done), callback_end(data)); Run functions in parallel and then execute "callback_end".</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">parallel</span>([
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi 3!<span class="pl-pds">"</span></span>);
-            <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>)
-        }, <span class="pl-c1">3000</span>);
-    },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi 2!<span class="pl-pds">"</span></span>);
-            <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b<span class="pl-pds">"</span></span>);
-        }, <span class="pl-c1">2000</span>);
-    },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>hi 1!<span class="pl-pds">"</span></span>);
-            <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>);
-        }, <span class="pl-c1">1000</span>);
-    }
-],<span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>End: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">JSON</span>.<span class="pl-en">stringify</span>(data));
-});</pre></div>
-
-<pre><code>//Wait 1 second
--&gt; hi 1! //Wait 1 second
--&gt; hi 2! //Wait 1 second
--&gt; hi 3!
--&gt; End: ["a","b","c"]
-</code></pre>
-
-<p><strong>sb.parallelLimit(number, array_functions(done), callback_end(data)); Run limit of functions in parallel and then execute "callback_end".</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">parallelLimit</span>(<span class="pl-c1">2</span>, [
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 1!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 2!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 3!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 4!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 5!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 6!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c2<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 7!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>a3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 8!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>b3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">3000</span>); },
-    <span class="pl-k">function</span> (<span class="pl-smi">done</span>) {
-        <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () { <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>go 9!<span class="pl-pds">"</span></span>); <span class="pl-en">done</span>(<span class="pl-s"><span class="pl-pds">"</span>c3<span class="pl-pds">"</span></span>) }, <span class="pl-c1">1000</span>); }
-],<span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>we: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">JSON</span>.<span class="pl-en">stringify</span>(data));
-});</pre></div>
-
-<pre><code>-&gt; go 1!
--&gt; go 3!
--&gt; go 2!
--&gt; go 5!
--&gt; go 4!
--&gt; go 7!
--&gt; go 6!
--&gt; go 9!
--&gt; go 8!
--&gt; we: ["a","b","c","a2","b2","c2","a3","b3","c3"]
-</code></pre>
-
-<p><strong>sb.forever(callback(next, end), callback_end); Loops forever.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">forever</span>(<span class="pl-k">function</span> (<span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Hi!<span class="pl-pds">"</span></span>)
-    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-en">next</span>();
-    }, <span class="pl-c1">3000</span>);
-});</pre></div>
-
-<pre><code>-&gt; Hi! // Wait 3 seconds;
--&gt; Hi! // Wait 3 seconds;
--&gt; ...
-</code></pre>
-
-<p><strong>sb.forever(callback(next, end), callback_end); Loops forever and break the loop.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>;
-<span class="pl-smi">sb</span>.<span class="pl-en">forever</span>(<span class="pl-k">function</span> (<span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>loop: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> i);
-    <span class="pl-k">if</span> (i<span class="pl-k">&gt;=</span><span class="pl-c1">3</span>) {
-        <span class="pl-en">end</span>(<span class="pl-s"><span class="pl-pds">"</span>Now Break!!<span class="pl-pds">"</span></span>)
-    }
-    i<span class="pl-k">++</span>;
-    <span class="pl-c1">setTimeout</span>(<span class="pl-k">function</span> () {
-        <span class="pl-en">next</span>();
-    }, <span class="pl-c1">3000</span>);
-}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Response: <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data);
-});</pre></div>
-
-<pre><code>-&gt; loop: 0 // Wait 3 seconds;
--&gt; loop: 1 // Wait 3 seconds;
--&gt; loop: 2 // Wait 3 seconds;
--&gt; loop: 3 // Wait 3 seconds;
--&gt; Response: Now Break!!
-</code></pre>
-
-<p><strong>sb.times(number, callback(iteration)); Iterates function "number" times.</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">times</span>(<span class="pl-c1">3</span>, <span class="pl-k">function</span> (<span class="pl-smi">iteration</span>) {
-        <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Abracadabra!<span class="pl-pds">"</span></span>);
-});</pre></div>
-
-<pre><code>-&gt; Abracadabra!
--&gt; Abracadabra!
--&gt; Abracadabra!
-</code></pre>
-
-<p><strong>sb.forSync(initial_value, final_value, incremental_value, callback(index, next, end), callback_end(data))</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">forSync</span>(<span class="pl-c1">0</span>, <span class="pl-c1">10</span>, <span class="pl-c1">1</span>, <span class="pl-k">function</span> (<span class="pl-smi">index</span>, <span class="pl-smi">next</span>, <span class="pl-smi">end</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(index)
-    <span class="pl-en">next</span>(<span class="pl-c1">5</span>)
-}, <span class="pl-k">function</span> (<span class="pl-smi">data</span>) {
-    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(data)
-})</pre></div>
-
-<pre><code>-&gt; 0
--&gt; 1
--&gt; 2
--&gt; 3
--&gt; 4
--&gt; 5
--&gt; 6
--&gt; 7
--&gt; 8
--&gt; 9
--&gt; 10
--&gt; [ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]
-</code></pre>
-
-<p><strong>Random number:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">random</span>(<span class="pl-c1">5</span>,<span class="pl-c1">10</span>);</pre></div>
-
-<pre><code>-&gt; 6
-</code></pre>
-
-<p><strong>sb.capitalize();</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">capitalize</span>(<span class="pl-s"><span class="pl-pds">"</span>abracadabra<span class="pl-pds">"</span></span>);</pre></div>
-
-<pre><code>-&gt; Abracadabra
-</code></pre>
-
-<p><strong>sb.dos2unix(string); Replace dos endline</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">dos2unix</span>(string);</pre></div>
-
-<p><strong>Real date validator:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">checkDate</span>(<span class="pl-s"><span class="pl-pds">'</span>dd-mm-yyyy<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>30/02/2015<span class="pl-pds">'</span></span>);</pre></div>
-
-<pre><code>-&gt; false
-</code></pre>
-
-<p><strong>Limit of words:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">excerpt</span>(<span class="pl-s"><span class="pl-pds">'</span>One, two, Freddy<span class="pl-cce">\'</span>s coming for you<span class="pl-pds">'</span></span>, <span class="pl-c1">3</span>);</pre></div>
-
-<pre><code>-&gt; 'One, two, Freddy's'
-</code></pre>
-
-<p><strong>Class boolean check:</strong></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">sb</span>.<span class="pl-en">isFunction</span>(obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">isArray</span>(obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">isObject</span>(obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">isNumber</span>(obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">isInteger</span>(obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">isString</span>(obj);
-<span class="pl-smi">sb</span>.<span class="pl-en">isBoolean</span>(obj);</pre></div>
-
-<h2>
-<a id="nodejs-tools" class="anchor" href="#nodejs-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node.js TOOLS:</h2>
+<a id="only-nodejs-tools" class="anchor" href="#only-nodejs-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Only Node.Js tools:</h2>
 
 <p><strong>sb.cp("file","copy"); Copy file with Promises</strong></p>
 
@@ -650,6 +659,8 @@ http://cdn.spellbook.io/spellbook.js
 .<span class="pl-en">catch</span>(<span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(err);
 })</pre></div>
+
+<p><a href="https://nodei.co/npm/spellbook/"><img src="https://nodei.co/npm/spellbook.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
